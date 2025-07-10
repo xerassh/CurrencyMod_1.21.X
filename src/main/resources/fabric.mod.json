@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "currencymod",
+	"version": "${version}",
+	"name": "Currency Mod",
+	"description": "Adds multiple currencies to the game.",
+	"authors": [
+		"xera"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/currencymod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.xera.currencymod.CurrencyMod"
+		],
+		"fabric-datagen": [
+			"com.xera.currencymod.CurrencyModDataGenerator"
+		],
+		"client": [
+			"com.xera.currencymod.CurrencyModClient"
+		]
+	},
+	"mixins": [
+		"currencymod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
